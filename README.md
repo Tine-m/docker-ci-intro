@@ -7,7 +7,7 @@ Use this repo as a `template` - not a `fork`[^template]
 
 [^template]: `template` and `fork` are two different concepts although somewhat similar; Forks clone all branches and all history, templates are complete detaced from the source [it's a fresh start](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#about-repository-templates). 
 
-[`Code` >> `Use this template` >> `Create new repository`](/../../generate)
+[`Code` >> `Use this template` >> `Create new repository`](/../../generate "Note that all links in GitHub issues, discussions and .md files opens default in the same tab as your current - so make it a habbit to hold down CTRL (Windows & Linux) or ⌘ (Mac) when you click a link")
 
 #### 👉 Work those issues 👈
 
@@ -16,4 +16,4 @@ Use this repo as a `template` - not a `fork`[^template]
 Continue there - in your own repo. Simply work the issues.
 
 #### 👉 If you need help 👈
-The [discussions](https://github.com/kea-dev/dx-intro/discussions) are enabled on the template repo (your source). If you need help, if you want to suggets improvements or if you have an urge to contribute to this tutorial - simply make a statement in the discussions. Feel free to mention me; [@lakruzz](https://github.com/lakruzz).
+The [discussions](https://github.com/kea-dev/dx-intro/discussions "Note that all links in GitHub issues, discussions and .md files opens default in the same tab as your current - so make it a habbit to hold down CTRL (Windows & Linux) or ⌘ (Mac) when you click a link") are enabled on the template repo (your source). If you need help, if you want to suggets improvements or if you have an urge to contribute to this tutorial - simply make a statement in the discussions. Feel free to mention me; [@lakruzz](https://github.com/lakruzz).
