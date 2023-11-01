@@ -41,3 +41,11 @@ jobs:
         
       - name: "List the issues copied"
         run: gh issue list -s all
+      
+      - name: "Set the README"
+        run: |
+          cp .github/template/README.md .
+          git add .
+          git commit -m "Updated the README"
+          git push origin
+
