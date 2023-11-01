@@ -15,7 +15,7 @@ cd $REPOROOT
  then
     echo "Using cached issues"
  else
-   gh issue list --label $TEMPLATELABEL -R $TEMPLATEREPO --json 'title,body' > $TEMPLATEISSUES
+   gh issue list --search "sort:created-asc" --label $TEMPLATELABEL -R $TEMPLATEREPO --json 'title,body' > $TEMPLATEISSUES
    CLEANUP="rm $TEMPLATEISSUES"
  fi
 
