@@ -11,7 +11,7 @@ env:
 permissions:
   checks: write
   actions: write
-  contents: read
+  contents: write
   issues: write
 
 jobs:
