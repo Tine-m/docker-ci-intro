@@ -14,7 +14,8 @@ This assumes you have installed Docker and Maven locally on your developer compu
 
 ### Create the Spring Boot application
 
-1\) You can clone this repo as your starting point: [spring-docker-demo\](https://github.com/Tine-m/spring-docker-demo) or use a similar repo of your own. The repo is a simple REST API with one endpoint:
+1\) You can clone this repo as your starting point [git repo](https://github.com/Tine-m/spring-docker-demo)
+[spring-docker-demo\](https://github.com/Tine-m/spring-docker-demo) or use a similar repo of your own. The repo is a simple REST API with one endpoint:
 
 ```java
 @RestController  
