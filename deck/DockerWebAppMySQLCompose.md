@@ -1,6 +1,6 @@
 # Exercise 5: Docker Compose: multi container application
 
-With Compose, we use a YAML file to configure our application’s services. Then, with a single command, we create and start all the services from our configuration.
+With Compose, we use a YAML file to configure our application’s services. Then, with a single command `docker-compose up`, we create and start all the services from our configuration.
 
 Compose works in all environments: production, staging, development, testing, as well as CI workflows. It also has commands for managing the whole lifecycle of your application: 
 
@@ -25,6 +25,31 @@ This assumes you have installed Docker and Maven locally on your developer compu
 
 Go to the root directory of our project, and create a docker-compose.yml file:
 
-Next, let's add the below configuration to a docker-compose.yml file:
+Next, let's add the below configuration to a docker-compose.yml file (you could consider using and .env configuration file as in exercise 3 about Docker-Compose):
+```docker
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employeedb
+    networks:
+      springboot-mysql-net:
 
+  springboot-restful-webservices:
+    container_name: springboot-services
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+    networks:
+      springboot-mysql-net:
+    restart: on-failure
 
+networks:
+  springboot-mysql-net:
+```
