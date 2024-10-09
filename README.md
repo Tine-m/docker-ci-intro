@@ -9,7 +9,7 @@ Use this repo as a `template` - not a `fork`[^template]
 
 #### 👉 Work those issues 👈
 
-<img width="100" align="left" alt="image" src="https://user-images.githubusercontent.com/155492/219313640-1328aefb-7695-41d2-bbef-5c5ffe6ab079.png"> There's a automated GitHub Actions workflow that starts immidately when you generate your repository - it copies the template issues over to your own repo - It may take 15-20 seconds to finish - You can monitor it in the `Actions` tab - of your own newly created repo.
+<img width="100" align="left" alt="image" src="https://user-images.githubusercontent.com/155492/219313640-1328aefb-7695-41d2-bbef-5c5ffe6ab079.png"> There's a automated GitHub Actions workflow that starts immedately when you generate your repository - it copies the template issues over to your own repo - It may take 15-20 seconds to finish - You can monitor it in the `Actions` tab - of your own newly created repo.
 
 Continue there - in your own repo. Simply work the issues.
 
