@@ -119,12 +119,14 @@ ENTRYPOINT: This is where you configure how the application is executed inside t
 #### Adding Profile to Deploy in Docker Environment
 Let's implement the profile in the Spring boot application to deploy it in a docker environment (I'm not sure if this step is necessary).
 
-Create an application-docker.properties file under the resources folder and place the below property to active docker profile in the application.properties file::
+8\)
+Create an `application-docker.properties` file under the resources folder and place the below property to active docker profile in the `application.properties` file:
 
 ```docker
 spring.profiles.active=docker
 ```
 
+9\)
 Next, let's change the application-docker.properties file as per the docker environment:
 
 ```docker
@@ -135,14 +137,10 @@ spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-The localhost won't work in the docker network so we change it to the container name which is 'mysqldb'.
+The localhost won't work in the docker network so we use the container name in the url: 'mysqldb'.
 
 
-```docker
-spring.datasource.url=jdbc:mysql://mysqldb:3306/employeedb
-```
-
-
+10\)
 Next, use the following command to maven build this project:
 
 ```maven
@@ -165,7 +163,7 @@ Let’s now build the docker image by typing the following command:
 docker build -t springboot-services .
 ```
 
-The file path . defines the location of the Dockerfile in the current directory, and the -t argument tags the resulting image, where the image name is the springboot-restful-webservices and the tag is the latest.
+The file path . defines the location of the Dockerfile in the current directory, and the -t argument tags the resulting image, where the image name is the springboot-services and the tag is the latest.
 
 After the build is successfully finished, we can check to see if it appears in the list of docker images available locally. To do so, we can execute the below command.
 
