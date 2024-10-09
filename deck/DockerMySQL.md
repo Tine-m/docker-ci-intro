@@ -49,7 +49,7 @@ Verify - and ensure that you can answer all the following questions:
 
 ### Access your MySQL server via a bash inside the container
 
-3\) 
+3\)  
 By now you have a running container, with a Linux image and MySQL installed. Let’s navigate into a terminal (bash window) **inside this container** and connect to the MySQL server  
 In your terminal type the following (remember sudo on Ubuntu and Mac)
 
@@ -59,14 +59,14 @@ docker exec \-it my-docker-mysql bash
 
 This should open a terminal connected to the bash shell running INSIDE your container. 
 
-4\) 
+4\)  
 In this terminal type the following to open a MySQL Client: 
 ```docker
 mysql \-u root \-p
 ```
 Enter the password you selected when you started the container (**test-1234**, if you did CUT AND PASTE)
 
-5\) 
+5\)  
 Execute a few SQL commands, to convince yourself that we have a functional MySQL-client, for example:	
 ```sql
 show databases;  
@@ -76,39 +76,44 @@ drop database dummy\_db
 show databases
 ```
 
-6\) 
-Now type exit to return to you  bash terminal in the container  
-7\) 
-Type exit one more time to return to "your own" terminal
+6\)  
+Now type exit to return to you  bash terminal in the container.
+
+7\)  
+Type exit one more time to return to "your own" terminal.
 
 ### Create a non-root user to use with our new containerized database
 
-8\) 
+8\)  
 Now, repeat all the steps above to login to the MySQL client in the container.
 
-9\) 
+ 
+9\)  
 Create a non-root user with credentials which we will use when we connect from our Spring Boot apps and Workbench. Replace user  and password to your own liking.  
 ```sql
 CREATE USER 'a\_user'@'%' IDENTIFIED BY 'a\_safe\_password';  
 GRANT ALL ON \*.\* TO 'a\_user'@'%';
 ```
 
-10\) 
+10\)  
 Verify that the user with the selected grants was created  
 ```sql
 SELECT User, Host FROM mysql.user;  
  show grants for 'a\_user'@'%';
 ```
-11\) 
-Finally, before you exit, create a small database for one of your Spring Boot Projects for the next step.
+
+11\)  
+Finally, before you exit, create a small database.
 
 ### Connect to your containerized MySQL server from Workbench and Java
 
-12\) Open Workbench or whatever MySQL Client you are using, and create a new MySQL Connection   
-Give it a name, use 127.0.0.1, and enter the port you used when you started the container (**3307**), and the username and password for the non-root user created in step 9  
-Verify that you can connect, and see the database you created in step 11
+12\)  
+Open Workbench or whatever MySQL Client you are using, and create a new MySQL Connection   
+Give it a name, use 127.0.0.1, and enter the port you used when you started the container (**3307**), and the username and password for the non-root user created in step 9.  
+Verify that you can connect, and see the database you created in step 11.
 
-13\) Open a (Spring Boot) Project that uses a MySQL database, change the connection parameters to match your containerized server, and verify that you can use this database.
+13\)  
+Open a (Spring Boot) Project that uses a MySQL database, change the connection parameters to match your containerized server, and verify that you can use the database you made in step 11.
 
 |  | [>> Next](./DockerWebApp.md) | 
 |:------:|:------:|
