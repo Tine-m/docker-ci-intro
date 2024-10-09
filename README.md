@@ -1,4 +1,5 @@
-# Docker tutorial (Study Point Assignment 5 - 10 study points)
+# Docker tutorial 
+Study Point Assignment # 5: 10 study points for all five exercises
 
 #### 👉 Study point exercises 👈
 #### 👉 Work those issues 👈
