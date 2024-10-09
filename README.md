@@ -1,4 +1,4 @@
-# Docker tutorial (Study Point ASssignment)
+# Docker tutorial (Study Point Assignment 5 10 point for all exercises)
 #### 👉 Create a copy of this repo 👈
 
 Use this repo as a `template` - not a `fork`[^template]
