@@ -1,6 +1,6 @@
 # Docker Cheat Sheet
 
-You will find most of the commands you need in this document. Just below the table there's a link to a more complete Cheat Cheat.
+You will find most of the commands you need in this document. Just below the table there's a link to a more complete Cheat Sheet.
 
 | docker pull mysql:latest | Pulls an image from the Docker Registry |
 | ----- | :---- |
