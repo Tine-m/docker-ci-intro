@@ -1,13 +1,4 @@
-> [!IMPORTANT]  
-> The maintenance of this particular repo is discontinued.<br/>
-> You should head over to [thetechcollective/dx-intro](https://github.com/thetechcollective/dx-intro).<br/>
-> _same same_ but maintained!
-
-
-
-# DX (Developer Experience) intro
-**DX - Developer Experience. This tutorial introduces some of the features in the GitHub eco-system that will make your team go faster - in a very DevOpsy way.**
-
+# Docker tutorial 
 #### 👉 Create a copy of this repo 👈
 
 Use this repo as a `template` - not a `fork`[^template]
