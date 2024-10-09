@@ -23,9 +23,12 @@ Use this repo as a `template` - not a `fork`[^template]
 Continue there - in your own repo. Simply work the issues.
 
 #### 👉 Study point Assignment 👈
-<p>The [exercise1](/deck/DockerMySQL.md) are enabled on the template repo (your source).</p>
-<p>The [exercise2](/deck/DockerWebApp.md) are enabled on the template repo (your source).</p>
-<p>The [exercise3](/deck/DockerVolumeCompose.md) are enabled on the template repo (your source).</p>
+[Exercise1](/deck/DockerMySQL.md) are enabled on the template repo (your source).
+<br>
+[Exercise2](/deck/DockerWebApp.md) are enabled on the template repo (your source).
+<br>
+[Exercise3](/deck/DockerVolumeCompose.md) are enabled on the template repo (your source).
+<br>
 
 
 #### 👉 If you need help 👈
