@@ -12,7 +12,7 @@ This assumes you have installed Docker and Maven locally on your developer compu
 * Be able to run image in docker container  
 * Be able to run image in docker container in detached mode (background)
 
-### Create the Spring Boot application
+### Create/clone a Spring Boot application
 
 1\)  
 You can clone this repo as your starting point [springboot-docker-demo](https://github.com/Tine-m/spring-docker-demo)
