@@ -3,9 +3,9 @@
 [Docker Cheat Sheet](Docker-Cheat-Sheet.pdf): Commands that might come in handy for the exercises.
 
 ### Learning outcome
-●	Understand and use the concept Docker Volumes
-●	Know how to setup a MySQL Docker container where data will  "survive"  being closed down and restarted
-●	Understand how to define and run a container using docker-compose
+<li>Understand and use the concept Docker Volumes</li>
+<li>Know how to setup a MySQL Docker container where data will  "survive"  being closed down and restarted</li>
+<li>Understand how to define and run a container using docker-compose</li>
 
 
 # 1 Docker Volumes
