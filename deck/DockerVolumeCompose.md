@@ -1,6 +1,12 @@
 # Exercise 3: Docker Volumes \+ Docker-compose for MySQL             
 
 [Docker Cheat Sheet](Docker-Cheat-Sheet.pdf): Commands that might come in handy for the exercises.
+# Learning outcome
+●	Understand and use the concept Docker Volumes
+●	Know how to setup a MySQL Docker container where data will  "survive"  being closed down and restarted
+●	Know how to build your own Docker Images and run those images as containers, both locally and on remote Virtual Machines
+●	Understand how to define and run multiple containers using docker-compose
+
 
 # 1 Docker Volumes
 
@@ -22,9 +28,9 @@ Everything above in ONE LINE.
 
 **d)** Try and execute a few SQL commands, to convince yourself, that we have a functional MySQL-client, for example:	  
 ```sql
-show databases;`  
-create database dummy_db;`  
-show databases; --Verify that dummy_db was create`
+show databases;  
+create database dummy_db;
+show databases; --Verify that dummy_db was create
 ```
 
 Now type **exit** to return to you  bash terminal in the container and type **exit** one more time to return to "your own" terminal
