@@ -1,4 +1,4 @@
-# Docker Volumes \+ Docker-compose              
+# Exercise 3: Docker Volumes \+ Docker-compose              
 
 Commands that might come in handy: [Docker Cheat Sheet](DockerCheatSheet.md):
 
