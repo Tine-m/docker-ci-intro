@@ -2,7 +2,7 @@
 
 This exercise will make you run MySQL in a Docker Container on your local developer computer.
 
-[Docker Cheat Cheat](https://docs.google.com/document/d/1NrWLs73bZlvU04EqAYV5zPzRAg7W0zBZaK284uS8wlI/edit?usp=sharing): Commands that might come in handy for the following.
+[Docker Cheat Sheet](DockerCheatSheet.md): Commands that might come in handy for the following.
 
 *Before we start, you might wonder why do this, if you already have MySQL installed on your computer.*  
 *There are several benefits. What if you quickly want to test another version of MySQL. This is super easy with Docker. You might need alternative databases, like MongoDB, Redis etc. Again super easy to get just the version you need via the right Docker Image. There is actually no need at all  for you to install MySQL on your own computer. You can just run it in a container. This is also a good way to ensure that ALL developers are using the same version.*
