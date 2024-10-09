@@ -105,13 +105,10 @@ docker images
 
 ### Test CRUD RESTful services using Postman Client or HTTP client in Intellij
 6\)  
-
 Create User REST API:
-
 Request URL: http://localhost:8080/api/users
 HTTP Method: POST
 Request Body:
-
 
 ```json
 {
