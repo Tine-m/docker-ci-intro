@@ -12,13 +12,13 @@ This assumes you have installed Docker and Maven locally on your developer compu
 
 ### Learning outcome
 
-* Be able to build a Docker image   
-* Be able to run image in docker container  
-* Be able to run image in docker container in detached mode (background)
+* Be able to create a docker network so several containers can communicate via the network
+ 
 
 ### MySQL Image in a Docker Container
 
-1\) You can clone this repo as your starting point [springboot-docker-demo](https://github.com/Tine-m/spring-docker-demo)
+1\)  
+In You can clone this repo as your starting point [springboot-docker-demo](https://github.com/Tine-m/spring-docker-demo)
  or use a similar repo of your own.
  
  The Spring Boot project architecture: 
@@ -27,7 +27,8 @@ This assumes you have installed Docker and Maven locally on your developer compu
 int i = 10;
 ```
 
-2\) Let's first deploy the MySQL image in a docker container (or reuse an existing image).
+2\)  
+Let's first deploy the MySQL image in a docker container (or reuse an existing image).
 Step1: Pull MySQL Image
 Here is the docker command to pull the latest MySQL docker image:
 
@@ -44,7 +45,7 @@ docker pull mysql
 docker network create springboot-mysql-net
 ```
 
-Here springboot-mysql-net is the network name.
+The network name is springboot-mysql-net.
 
 4\) Use the below command to list the networks:
 ```docker
