@@ -56,30 +56,34 @@ We will use the Bind Mount strategy for the volume, so we can see the actual fol
 Even though we only have one container, using Docker Compose can help us set up the environment, and spare us the problem with copying long docker commands and keep them as one line.  
 Create an empty directory somewhere on you computer and add these two files with the given content (spelled exactly like this) into the directory:
 
-**docker-compose.ym**l  
-`version: "3.8"`  
-`services:`  
-  `db:`  
-    `container_name: mysql_db`  
-    `image: mysql:8.0.38`  
-    `restart: unless-stopped`  
-    `env_file: .env`  
-    `environment:`  
-      `- MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD`  
-      `- MYSQL_DATABASE=$MYSQL_DATABASE`  
-    `ports:`  
-      `- $MYSQLDB_LOCAL_PORT:3306`  
-    `volumes:`  
-       `- ./data:/var/lib/mysql # for data`  
-      `#- DATA:/var/lib/mysql # for data`  
-`volumes:`  
-  `DATA:`
+**docker-compose.yml**
+```docker
+version: "3.8"`  
+services:`  
+  db:`  
+    container_name: mysql_db`  
+    image: mysql:8.0.38`  
+    restart: unless-stopped`  
+    env_file: .env`  
+    environment:`  
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD`  
+      - MYSQL_DATABASE=$MYSQL_DATABASE`  
+    ports:`  
+      - $MYSQLDB_LOCAL_PORT:3306`  
+    volumes:`  
+       - ./data:/var/lib/mysql # for data`  
+      #- DATA:/var/lib/mysql # for data`  
+volumes:`  
+  DATA:`
+```
 
 **.env**  
-`#Never publish this file on a public repo and use SAFE PASSWORDS for production`  
-`MYSQL_ROOT_PASSWORD=test12`  
-`MYSQL_DATABASE=test_db`  
-`MYSQLDB_LOCAL_PORT=3307`
+```docker
+#Never publish this file on a public repo and use SAFE PASSWORDS for production`  
+MYSQL_ROOT_PASSWORD=test12`  
+MYSQL_DATABASE=test_db`  
+MYSQLDB_LOCAL_PORT=3307`
+```
 
 Verify that your directory only contains the two files introduced above and do the following:
 
