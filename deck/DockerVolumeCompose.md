@@ -11,8 +11,8 @@ If you have a mySQL container running (docker ps) or stopped (`docker ps -a`),  
 
 ### First repeat exactly what you did in exercise 1 to recap the problem we are trying to solve (persisting data)
 
-**a**) `docker run --name docker-mysql --restart unless-stopped -p 3307:3306 -e MYSQL_ROOT_PASSWORD=test-1234 -d mysql:8.0.34`  
-Everything above in ONE LINE
+**a**) `docker run --name docker-mysql --restart unless-stopped -p 3307:3306 -e MYSQL_ROOT_PASSWORD=test-1234 -d mysql:8.0.38`  
+Everything above in ONE LINE.
 
 **b)** `docker exec -it docker-mysql bash`  →  This opens a terminal connected to the bash shell running INSIDE your container. 
 
@@ -20,10 +20,12 @@ Everything above in ONE LINE
 
 `mysql -u root -p`   →  Enter the password you selected when you started the container (test-1234, if you did CUT AND PASTE)
 
-d) Try and execute a few SQL commands, to convince yourself, that we have a functional MySQL-client, for example:	  
-`show databases;`  
-`create database dummy_db;`  
-`show databases; --Verify that dummy_db was create`
+**d)** Try and execute a few SQL commands, to convince yourself, that we have a functional MySQL-client, for example:	  
+```sql
+show databases;`  
+create database dummy_db;`  
+show databases; --Verify that dummy_db was create`
+```
 
 Now type **exit** to return to you  bash terminal in the container and type **exit** one more time to return to "your own" terminal
 
@@ -37,10 +39,9 @@ This should verify that you have lost the database created in the previous conta
      
 2. `docker volume ls`  To see your volumes (probably none, unless you have created volumes while experimenting)  
      
-3. Everything below in ONE LINE  
+   Everything below in ONE LINE:
      
-4. `docker run --name docker-mysql --restart unless-stopped -v DATA:/var/lib/mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=test-1234 -d mysql:8.0.34`  
-5.   
+4. `docker run --name docker-mysql --restart unless-stopped -v DATA:/var/lib/mysql -p 3307:3306 -e MYSQL_ROOT_PASSWORD=test-1234 -d mysql:8.0.38`  
 6. Repeat step **b-d** from above and **stop** and **close** the container.  
 7. Now start the container again, and repeat step b+c.   
 8. In step d, just verify that the database has survived that the container was when restarted with the DATA volume
@@ -60,7 +61,7 @@ Create an empty directory somewhere on you computer and add these two files with
 `services:`  
   `db:`  
     `container_name: mysql_db`  
-    `image: mysql:8.0.34`  
+    `image: mysql:8.0.38`  
     `restart: unless-stopped`  
     `env_file: .env`  
     `environment:`  
