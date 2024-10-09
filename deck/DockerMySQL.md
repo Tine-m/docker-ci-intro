@@ -30,8 +30,8 @@ Verify that the image was installed
 ***Info**: You can replace 8.0.38 above (and in the following) with the tag "latest" to get the latest version of the MySQL image. However, it's a good practice to specify a version tag instead of using the latest, to ensure consistency across different environments. Also, as of this writing, 8.0.38 is the newest version supported by MySQL Workbench. If you install a 8.1.X version Workbench will complain.* 
 
 2\)  
-Now type the following to start the container. Change highlighted parts to you own liking  
-Important: Everything below MUST be **in one line**, that is NO LINE-BREAKS
+Now type the following to start the container. You can change the name <b>my-docker-mysql</b> to you own liking  
+Important: Everything below MUST be **in one line**, NO LINE-BREAKS!
 
 ```docker
 docker run \--name my-docker-mysql \--restart unless-stopped \-p 3307:3306 \-e MYSQL\_ROOT\_PASSWORD=test-1234 \-d mysql:8.0.34
