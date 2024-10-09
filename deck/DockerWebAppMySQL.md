@@ -70,19 +70,20 @@ docker run --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=
 #### Access the MySQL database in a container
 
 6\) 
-Here is the command to access the MySQL database in a container (see more in exercise 1):
+Here is the command to access the MySQL database in a container:
 
 ```docker
 docker exec -it mysqldb bash
 ```
 
+Verify that you have a database 'employeedb' (see how to do this in exercise 1 in case you have forgotten).
 That's it. Next, we will run the Spring boot application in a docker container.
 
 ### Spring Boot Application in a docker Container in the network
 
 I assume that you have downloaded the Spring boot project from the GitHub repository and set up the project in your IDE.
 
-7\) 
+7\)  
 Use the following command to maven build the project:
 
 ```maven
@@ -94,7 +95,7 @@ springboot-services-0.0.1-SNAPSHOT.jar.
 #### Create Dockerfile to Build the docker image
 Docker builds images automatically by reading the instructions from a Dockerfile. The Dockerfile is a text file that contains all commands, in order, needed to build a given image. 
 
-8\) 
+8\)  
 Go to the project root directory and create a file named Dockerfile with the following content:
 
 
@@ -119,15 +120,15 @@ ENTRYPOINT: This is where you configure how the application is executed inside t
 #### Adding Profile to Deploy in Docker Environment
 Let's implement the profile in the Spring boot application to deploy it in a docker environment (I'm not sure if this step is necessary).
 
-8\)
+9\)  
 Create an `application-docker.properties` file under the resources folder and place the below property to active docker profile in the `application.properties` file:
 
 ```docker
 spring.profiles.active=docker
 ```
 
-9\)
-Next, let's change the application-docker.properties file as per the docker environment:
+10\) 
+Change the `application-docker.properties` file:
 
 ```docker
 spring.datasource.url=jdbc:mysql://mysqldb:3306/employeedb
@@ -140,7 +141,7 @@ spring.jpa.hibernate.ddl-auto=update
 The localhost won't work in the docker network so we use the container name in the url: 'mysqldb'.
 
 
-10\)
+11\) 
 Next, use the following command to maven build this project:
 
 ```maven
