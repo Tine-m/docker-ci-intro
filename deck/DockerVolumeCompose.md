@@ -58,31 +58,31 @@ Create an empty directory somewhere on you computer and add these two files with
 
 **docker-compose.yml**
 ```docker
-version: "3.8"`  
-services:`  
-  db:`  
-    container_name: mysql_db`  
-    image: mysql:8.0.38`  
-    restart: unless-stopped`  
-    env_file: .env`  
-    environment:`  
-      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD`  
-      - MYSQL_DATABASE=$MYSQL_DATABASE`  
-    ports:`  
-      - $MYSQLDB_LOCAL_PORT:3306`  
-    volumes:`  
-       - ./data:/var/lib/mysql # for data`  
-      #- DATA:/var/lib/mysql # for data`  
-volumes:`  
-  DATA:`
+version: "3.8"
+services:
+  db:
+    container_name: mysql_db
+    image: mysql:8.0.38
+    restart: unless-stopped
+    env_file: .env
+    environment: 
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+      - MYSQL_DATABASE=$MYSQL_DATABASE
+    ports:
+      - $MYSQLDB_LOCAL_PORT:3306
+    volumes:
+       - ./data:/var/lib/mysql # for data
+      #- DATA:/var/lib/mysql # for data 
+volumes:
+  DATA:
 ```
 
 **.env**  
 ```docker
-#Never publish this file on a public repo and use SAFE PASSWORDS for production`  
-MYSQL_ROOT_PASSWORD=test12`  
-MYSQL_DATABASE=test_db`  
-MYSQLDB_LOCAL_PORT=3307`
+#Never publish this file on a public repo and use SAFE PASSWORDS for production
+MYSQL_ROOT_PASSWORD=test12
+MYSQL_DATABASE=test_db  
+MYSQLDB_LOCAL_PORT=3307
 ```
 
 Verify that your directory only contains the two files introduced above and do the following:
