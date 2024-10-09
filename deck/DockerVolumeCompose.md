@@ -1,4 +1,4 @@
-# Exercise 3: Docker Volumes \+ Docker-compose              
+# Exercise 3: Docker Volumes \+ Docker-compose for MySQL             
 
 Commands that might come in handy: [Docker Cheat Sheet](DockerCheatSheet.md):
 
@@ -96,3 +96,6 @@ Verify that your directory only contains the two files introduced above and do t
 4. Verify, in the directory with your two files, that a directory **data** has been created with your actual database (take my word for that)
 
 Now repeat step 1-3, and in step 2, verify that the database copied into the data folder is mounted into the container, so we can start and stop the container without losing data.  
+
+| [Prev <<](./DockerWebApp.md) | [>> Next](./DockerWebAppMySQL.md) | 
+|:------:|:------:|
