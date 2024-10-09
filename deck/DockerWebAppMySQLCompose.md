@@ -21,7 +21,8 @@ This assumes you have installed Docker and Maven locally on your developer compu
 
 ### Creating the docker-compose.yml configuration
 
-1\) For a Spring Boot MySQL application using docker-compose, we need to create a docker-compose.yml file that contains the configuration for all the application services.
+1\) 
+For a Spring Boot MySQL application using docker-compose, we need to create a docker-compose.yml file that contains the configuration for all the application services.
 
 Go to the root directory of our project, and create a docker-compose.yml file:
 
@@ -37,7 +38,7 @@ services:
     networks:
       springboot-mysql-net:
 
-  springboot-restful-webservices:
+  springboot-services:
     container_name: springboot-services
     build:
       context: ./
@@ -53,3 +54,20 @@ services:
 networks:
   springboot-mysql-net:
 ```
+
+Let's understand the above docker-compose.yml file.
+
+We have configured two services:
+
+mysqldb service: It runs MySQL database that runs on port 3306
+springboot-services service: Deploy Spring boot application in tomcat server on port 8080
+
+build - Specify the location of the Dockerfile.
+
+depends_on - Notice the depends_on keyword in the compose file. Docker compose will make sure that all the dependencies of a service are started first before starting the service itself.
+
+environment – In this section, we are setting the environment variables for MySQL root password and MySQL database name.
+
+ports – Here we are mapping the Host port with the port inside a docker container.
+
+restart: on failure - Restart the container if it stops on failure. 
