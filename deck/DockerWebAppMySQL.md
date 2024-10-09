@@ -194,7 +194,7 @@ Note that we are running the Spring boot application in a container in the same 
 
 ### Demo
 
-Test CRUD services using Postman Client or IntelliJs http client.
+Test CRUD services using Postman Client or IntelliJs HTTP client.
 
 Create User REST API:
 Request URL: http://localhost:8080/api/users
@@ -203,10 +203,12 @@ Request Body:
 
 ```json
 {
-    "firstName": "ramesh",
-    "lastName":"fadatare",
-    "email": "ramesh@gmail.com"
-}```
+    "id": 1,
+    "firstName": "Santa",
+    "lastName":"Claus",
+    "email": "xmas@gmail.com"
+}
+```
 
 Get User REST API:
 Request URL: http://localhost:8080/api/users/1
