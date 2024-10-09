@@ -17,7 +17,7 @@ This assumes you have installed Docker locally on your developer computer(s)
 ●        Have installed Docker on your local developer computer  
 ●        Know how to install and run images in a local docker container  
 ●        Know how to install a MySQL Image and run it in a container exposing the internal MySQL port to your own liking.  
-●        Know the basics required to navigate in a Linux Shell and install new software via a Linux Shell
+●        Know the basics required to navigate in a Linux Shell
 
 ### Get the image and start the Container
 
@@ -34,12 +34,12 @@ Now type the following to start the container. You can change the name <b>my-doc
 Important: Everything below MUST be **in one line**, NO LINE-BREAKS!
 
 ```docker
-docker run \--name my-docker-mysql \--restart unless-stopped \-p 3307:3306 \-e MYSQL\_ROOT\_PASSWORD=test-1234 \-d mysql:8.0.34
+docker run \--name my-docker-mysql \--restart unless-stopped \-p 3307:3306 \-e MYSQL\_ROOT\_PASSWORD=test-1234 \-d mysql:8.0.38
 ```
 
 Verify that and ensure you can answer all the following questions:
 
-* A new mysql 8.0.28 image was "downloaded"  
+* A new mysql 8.0.38 image was "downloaded"  
 * A new container, named my-docker-mysql was created  
 * What's the idea with the environment flag (-e)  
 * What's the idea with \--restart flag, and the suggested value  
@@ -80,14 +80,17 @@ show databases
 
 8\) Now, repeat all the steps above to login to the MySQL client in the container.
 
-9\) Create a non-root user with credentials which we will use when we connect from our Spring Boot apps and Workbench. Replace highlighted values to your own liking.  
+9\) Create a non-root user with credentials which we will use when we connect from our Spring Boot apps and Workbench. Replace user name and password to your own liking.  
+```sql
 CREATE USER 'a\_user'@'%' IDENTIFIED BY 'a\_safe\_password';  
 GRANT ALL ON \*.\* TO 'a\_user'@'%';
+```
 
 10\) Verify that the user with the selected grants was created  
+```sql
 SELECT User, Host FROM mysql.user;  
  show grants for 'a\_user'@'%';
-
+```
 11\) Finally, before you exit, create a database for one of your Spring Boot Projects for the next step.
 
 ### Connect to your containerized MySQL server from Workbench and Java
