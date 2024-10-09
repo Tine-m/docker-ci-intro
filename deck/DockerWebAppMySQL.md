@@ -1,8 +1,8 @@
-# Exercise 4: Run Web App in a Docker Container
+# Exercise 4: Run Web App and MYSQL database in a Docker network
 
 If we have a Spring Boot appplication and a MySQL database, we will need to consider app and database as two different services. 
 Basically, we are going to run the services in two separate docker containers. 
-We will run the two  containers in the same Docker network so that they can communicate with each other. 
+We will run the two containers in the same Docker network so that they can communicate with each other. 
 In this exercise you will create a docker image for a Spring boot application, 
 then create a docker container from the image and finally run the app in a docker container.
 
