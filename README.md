@@ -1,6 +1,7 @@
 # Docker tutorial (Study Point Assignment 5 - 10 study points)
 
 #### 👉 Study point exercises 👈
+#### 👉 Work those issues 👈
  [exercise1](/deck/DockerMySQL.md) 
  [exercise2](/deck/DockerWebApp.md) 
  [exercise3](/deck/DockerVolumeCompose.md)
