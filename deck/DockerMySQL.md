@@ -22,7 +22,7 @@ This assumes you have installed Docker locally on your developer computer.
 ### Get the image and start the Container
 
 1\)  
-In a terminal on your local computer execute the following statements (on the remote Ubuntu Server and possibly also on Mac, you need to prefix the commands with **sudo**)  
+In a terminal on your local computer execute the following statements (on a remote Ubuntu Server and possibly also on Mac, you need to prefix the commands with **sudo**)  
 ```docker
 docker pull mysql:8.0.38
 ```
