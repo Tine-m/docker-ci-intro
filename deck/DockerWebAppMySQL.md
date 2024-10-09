@@ -12,7 +12,9 @@ This assumes you have installed Docker and Maven locally on your developer compu
 
 ### Learning outcome
 
-* Be able to create a docker network so several containers can communicate via the network
+* Be able to create a docker network
+* Make a web application and MySQL database communicate via a docker network
+* Be able to run several containers in the same Docker network so they can communicate with each other. 
  
 
 ### MySQL Image in a Docker Container
@@ -37,9 +39,10 @@ docker pull mysql
 ```
 
 
-#### Create a docker network to communicate Spring boot application and MySQL database
+#### Create a docker network
 
-3\) Here is the docker command to create a new network:
+3\)  
+Use this command to create a new network:
 
 ```docker
 docker network create springboot-mysql-net
@@ -47,16 +50,17 @@ docker network create springboot-mysql-net
 
 The network name is springboot-mysql-net.
 
-4\) Use the below command to list the networks:
+
+4\)  
+Use this command to list the networks:
 ```docker
 docker network ls
 ```
 
+#### Run MySQL image in a docker container in the network
 
-
-#### Run MySQL image in a docker container in the same network
-
-5\) Here is the docker command to run MySQL image in a container in the same network:
+5\)  
+Run a MySQL image in a container in the network with this command:
 
 ```docker
 docker run --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=employeedb -d mysql
@@ -65,30 +69,33 @@ docker run --name mysqldb --network springboot-mysql-net -e MYSQL_ROOT_PASSWORD=
 
 #### Access the MySQL database in a container
 
-5\) Here is the command to access the MySQL database in a container (see more in exercise 1):
+6\) 
+Here is the command to access the MySQL database in a container (see more in exercise 1):
 
 ```docker
 docker exec -it mysqldb bash
 ```
 
-That's it. Once the MySQL image is deployed in a docker container. Next, we will deploy the Spring boot application in a docker container.
+That's it. Next, we will run the Spring boot application in a docker container.
 
-### Spring Boot Application in a Docker Container
+### Spring Boot Application in a docker Container in the network
 
- I assume that you have downloaded the Spring boot project from the GitHub repository and set up the project in your IDE.
+I assume that you have downloaded the Spring boot project from the GitHub repository and set up the project in your IDE.
 
-6\) Next, use the following command to maven build this project:
+7\) 
+Use the following command to maven build the project:
 
 ```maven
 mvn clean package
 ```
-Once maven builds success, go target folder and you will be able to see the
-springboot-services-0.0.1-SNAPSHOT.jar file generated under the target folder.
+Once maven builds with success, go to the target folder and see the generated fil:
+springboot-services-0.0.1-SNAPSHOT.jar.
 
 #### Create Dockerfile to Build the docker image
 Docker builds images automatically by reading the instructions from a Dockerfile. The Dockerfile is a text file that contains all commands, in order, needed to build a given image. 
 
-Let's go to the project root directory and create a file named Dockerfile and the following content to it:
+8\) 
+Go to the project root directory and create a file named Dockerfile with the following content:
 
 
 ```docker
@@ -110,9 +117,9 @@ COPY: The COPY instruction copies new files or directories and adds them to the 
 ENTRYPOINT: This is where you configure how the application is executed inside the container.
 
 #### Adding Profile to Deploy in Docker Environment
-Let's implement the profile in the  Spring boot  application to deploy it in a docker environment.
+Let's implement the profile in the Spring boot application to deploy it in a docker environment (I'm not sure if this step is necessary).
 
-Let's create an application-docker.properties file under the resources folder and the below property to active docker profile in the application.properties file:
+Create an application-docker.properties file under the resources folder and place the below property to active docker profile in the application.properties file::
 
 ```docker
 spring.profiles.active=docker
