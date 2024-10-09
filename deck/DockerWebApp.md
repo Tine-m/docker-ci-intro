@@ -76,6 +76,7 @@ docker build \-t springboot-docker-demo .
 
 The file path . defines the location of the Dockerfile in the current directory, and the \-t argument tags the resulting image, where the **repository** name is the springboot-docker-demo and the tag is the latest.
 
+5\)  
 After the build is successfully finished, we can check to see if it appears in the list of docker images available locally. To do so, execute this command:
 
 ```docker
@@ -84,7 +85,7 @@ docker images
 
 ### Run Docker image in container
 
-5\)  
+6\)  
 Once you have a docker image, you can run it using the docker run command:
 
 ```docker
@@ -95,7 +96,7 @@ With the \-p option, we expose the container's 8080 port to the host's 8080\. (T
 
 By default, when you run a container using the docker run command, it does not publish any of its ports to the outside world. To make a port available to services outside Docker or to Docker containers that are not connected to the container’s network, use the \--publish or \-p flag.
 
-6\)  
+7\)  
 To run the docker container in the background (detached mode), use the \-d option in the docker run command:
 
 ```docker
@@ -112,7 +113,7 @@ docker ls
 
 ### Demo
 
-7\)  
+8\)  
 Once the docker image running in a container. Open the browser and hit this link in the browser [**http://localhost:8080/docker**](http://localhost:8080/docker)  
 You will see the below REST API response message in a browser:
 
