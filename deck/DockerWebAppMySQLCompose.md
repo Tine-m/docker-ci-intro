@@ -119,6 +119,6 @@ Request Body:
 }
 ```
 
-| [Prev <<](./DockerWebAppMySQLCompose.md) |   | 
+| [Prev <<](./DockerWebAppMySQL.md) |   | 
 |:------:|:------:|
 
