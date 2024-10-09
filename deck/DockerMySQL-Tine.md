@@ -1,6 +1,6 @@
 # Exercise 1: Running MySQL in a Docker Container
 
-This exercise will make you run MySQL in a Docker Container on your **local developer computer**
+This exercise will make you run MySQL in a Docker Container on your local developer computer.
 
 [Docker Cheat Cheat](https://docs.google.com/document/d/1NrWLs73bZlvU04EqAYV5zPzRAg7W0zBZaK284uS8wlI/edit?usp=sharing): Commands that might come in handy for the following.
 
