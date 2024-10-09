@@ -115,7 +115,7 @@ docker ls
 
 8\)  
 Once the docker image running in a container. Open the browser and hit this link in the browser [**http://localhost:8080/docker**](http://localhost:8080/docker)  
-You will see the below REST API response message in a browser:
+Hopefully you will see this REST API response message in a browser:
 
 ```html
 Hello from Spring Boot Application
