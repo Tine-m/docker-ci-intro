@@ -76,25 +76,31 @@ drop database dummy\_db
 show databases
 ```
 
-6\) Now type exit to return to you  bash terminal in the container  
-7\) Type exit one more time to return to "your own" terminal
+6\) 
+Now type exit to return to you  bash terminal in the container  
+7\) 
+Type exit one more time to return to "your own" terminal
 
 ### Create a non-root user to use with our new containerized database
 
-8\) Now, repeat all the steps above to login to the MySQL client in the container.
+8\) 
+Now, repeat all the steps above to login to the MySQL client in the container.
 
-9\) Create a non-root user with credentials which we will use when we connect from our Spring Boot apps and Workbench. Replace user name and password to your own liking.  
+9\) 
+Create a non-root user with credentials which we will use when we connect from our Spring Boot apps and Workbench. Replace user  and password to your own liking.  
 ```sql
 CREATE USER 'a\_user'@'%' IDENTIFIED BY 'a\_safe\_password';  
 GRANT ALL ON \*.\* TO 'a\_user'@'%';
 ```
 
-10\) Verify that the user with the selected grants was created  
+10\) 
+Verify that the user with the selected grants was created  
 ```sql
 SELECT User, Host FROM mysql.user;  
  show grants for 'a\_user'@'%';
 ```
-11\) Finally, before you exit, create a database for one of your Spring Boot Projects for the next step.
+11\) 
+Finally, before you exit, create a small database for one of your Spring Boot Projects for the next step.
 
 ### Connect to your containerized MySQL server from Workbench and Java
 
