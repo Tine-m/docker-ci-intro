@@ -14,7 +14,8 @@ This assumes you have installed Docker and Maven locally on your developer compu
 
 ### Create the Spring Boot application
 
-1\) You can clone this repo as your starting point [springboot-docker-demo](https://github.com/Tine-m/spring-docker-demo)
+1\)  
+You can clone this repo as your starting point [springboot-docker-demo](https://github.com/Tine-m/spring-docker-demo)
  or use a similar repo of your own. The repo is a simple REST API with one endpoint:
 
 ```java
@@ -29,7 +30,8 @@ public class DockerController {
 }
 ```
 
-2\) Use the following maven command in the terminal to build the project (a jar-file):
+2\)  
+Use the following maven command in the terminal to build the project (a jar-file):
 
 ```maven
 mvn clean package
@@ -39,7 +41,8 @@ Once maven builds successfully, go to the target folder and see the springboot-d
 
 ### Create a Dockerfile
 
-3\) Create a file named Dockerfile (spelled exactly like that) in the project root directory and type the following content:
+3\)  
+Create a file named Dockerfile (spelled exactly like that) in the project root directory and type the following content:
 
 ```docker
 FROM eclipse-temurin:17
@@ -61,7 +64,8 @@ ENTRYPOINT \["java", "-jar", "springboot-docker-demo.jar"\]
 
 ### Build Docker image
 
-4\) Now we have a Dockerfile, let’s build a docker image for our application.
+4\)  
+Now we have a Dockerfile, let’s build a docker image for our application.
 Before building the docker image, make sure that you’ve packaged the application as a jar file using maven. 
 
 You can build the docker image with the following command:
@@ -80,7 +84,8 @@ docker images
 
 ### Run Docker image in container
 
-5\) Once you have a docker image, you can run it using the docker run command:
+5\)  
+Once you have a docker image, you can run it using the docker run command:
 
 ```docker
 docker run \-p 8080:8080 springboot-docker-demo
@@ -90,7 +95,8 @@ With the \-p option, we expose the container's 8080 port to the host's 8080\. (T
 
 By default, when you run a container using the docker run command, it does not publish any of its ports to the outside world. To make a port available to services outside Docker or to Docker containers that are not connected to the container’s network, use the \--publish or \-p flag.
 
-6\) To run the docker container in the background (detached mode), use the \-d option in the docker run command:
+6\)  
+To run the docker container in the background (detached mode), use the \-d option in the docker run command:
 
 ```docker
 docker run \-d \-p 8080:8080 springboot-docker-demo
@@ -106,7 +112,8 @@ docker ls
 
 ### Demo
 
-6\) Once the docker image running in a container. Open the browser and hit this link in the browser [**http://localhost:8080/docker**](http://localhost:8080/docker)  
+7\)  
+Once the docker image running in a container. Open the browser and hit this link in the browser [**http://localhost:8080/docker**](http://localhost:8080/docker)  
 You will see the below REST API response message in a browser:
 
 ```html
