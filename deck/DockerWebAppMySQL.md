@@ -121,14 +121,7 @@ ENTRYPOINT: This is where you configure how the application is executed inside t
 Let's implement the profile in the Spring boot application to deploy it in a docker environment (I'm not sure if this step is necessary).
 
 9\)  
-Create an `application-docker.properties` file under the resources folder and place the below property to active docker profile in the `application.properties` file:
-
-```docker
-spring.profiles.active=docker
-```
-
-10\)  
-Change the `application-docker.properties` file:
+Create an `application-docker.properties` file under the resources folder and insert the following:
 
 ```docker
 spring.datasource.url=jdbc:mysql://mysqldb:3306/employeedb
@@ -138,13 +131,27 @@ spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update
 ```
 
+10\)  
+Insert into the `application.properties` file:
+
+```docker
+spring.datasource.url=jdbc:mysql://mysqldb:3306/employeedb
+spring.datasource.username=root
+spring.datasource.password=root
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto=update
+
+spring.profiles.active=docker
+```
+
 The localhost won't work in the docker network so we use the container name in the url: 'mysqldb'.
 
 11\)  
 Maven build the project again:
 
 ```maven
-mvn clean package
+mvn clean package -DskipTests
 ```
 
 Once maven builds with success, go to the target folder and see the file
