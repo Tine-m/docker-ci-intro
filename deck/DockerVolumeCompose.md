@@ -1,6 +1,6 @@
 # Exercise 3: Docker Volumes \+ Docker-compose for MySQL             
 
-Commands that might come in handy: [Docker Cheat Sheet](DockerCheatSheet.md):
+[Docker Cheat Sheet](Docker-Cheat-Sheet.pdf): Commands that might come in handy for the exercises.
 
 # 1 Docker Volumes
 
