@@ -20,7 +20,7 @@ This assumes you have installed Docker and Maven locally on your developer compu
 ### MySQL Image in a Docker Container
 
 1\)  
-You should clone this repo as your starting point: [springboot-docker-services](https://github.com/Tine-m/spring-docker-services)
+You should clone this repo as your starting point: [springboot-services-demo](https://github.com/Tine-m/spring-services-demo)
  
  The Spring Boot project architecture: 
 
