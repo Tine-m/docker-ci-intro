@@ -127,7 +127,7 @@ Create an `application-docker.properties` file under the resources folder and pl
 spring.profiles.active=docker
 ```
 
-10\) 
+10\)  
 Change the `application-docker.properties` file:
 
 ```docker
@@ -140,16 +140,15 @@ spring.jpa.hibernate.ddl-auto=update
 
 The localhost won't work in the docker network so we use the container name in the url: 'mysqldb'.
 
-
-11\) 
-Next, use the following command to maven build this project:
+11\)  
+Maven build the project again:
 
 ```maven
 mvn clean package
 ```
 
-Once maven builds with success, go to the target folder and you will to see the
-spring-boot-restful-web services-0.0.1-SNAPSHOT.jar file.
+Once maven builds with success, go to the target folder and see the file
+`spring-boot-restful-web services-0.0.1-SNAPSHOT.jar`.
 
 
 #### Build Docker Image from Dockerfile
@@ -158,7 +157,8 @@ Now that we have defined the Dockerfile, let’s build a docker image for our ap
 
 Make sure that you’ve packaged the application in a jar file. 
 
-Let’s now build the docker image by typing the following command:
+12\)  
+Build the docker image by typing the following command:
 
 ```docker
 docker build -t springboot-services .
@@ -166,8 +166,8 @@ docker build -t springboot-services .
 
 The file path . defines the location of the Dockerfile in the current directory, and the -t argument tags the resulting image, where the image name is the springboot-services and the tag is the latest.
 
-After the build is successfully finished, we can check to see if it appears in the list of docker images available locally. To do so, we can execute the below command.
-
+13\)  
+After the build is successfully finished, we can check to see if it appears in the list of docker images:
 
 ```docker
 docker images
@@ -175,6 +175,7 @@ docker images
 
 #### Run a docker image in a docker container in the same network
 
+14\)  
 Once you have a docker image, you can run a container like this:
 
 
