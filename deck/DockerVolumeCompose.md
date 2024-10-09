@@ -59,7 +59,7 @@ This should verify that you have lost the database created in the previous conta
 In this part we will use docker compose to start our single container.  
 We will use the Bind Mount strategy for the volume, so we can see the actual folder that holds the database for the volume. 
 
-Even though we only have one container, using Docker Compose can help us set up the environment, and spare us the problem with copying long docker commands and keep them as one line.  
+Even though we only have one container, using Docker Compose can help us set up the environment, and spare us the problem with copying long docker commands into the terminal window and keep them as one line.  
 Create an empty directory somewhere on you computer and add these two files with the given content (spelled exactly like this) into the directory:
 
 **docker-compose.yml**
