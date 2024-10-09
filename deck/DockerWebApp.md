@@ -1,0 +1,97 @@
+# Exercise 2: Run Web App in a Docker Container
+
+In this exercise you will create a docker image for a Spring boot application, thereafter create a docker container from the image and finally run the app in a docker container.
+
+### Preconditions
+
+This assumes you have installed Docker and Maven locally on your developer computer
+
+### Learning outcome
+
+* How to build a Docker image   
+* List images  
+* Run image in docker container  
+* Run image in docker container in detached mode (background)
+
+### Create the Spring Boot application
+
+1\) You can clone a repo from here: \<git repo url\>. It has a simple REST API.
+
+@RestController  
+public class DockerController {
+
+    @GetMapping("/docker")  
+    public String dockerDemo(){  
+        return "Hello from Spring Boot Application";
+
+    }  
+}
+
+2\) Use the following command to maven build this project:
+
+mvn clean package
+
+Once maven builds success, go target folder and you will be able to see the springboot-docker-demo-0.0.1-SNAPSHOT.jar generated.
+
+### Create a Dockerfile
+
+3\) Let's go to the project root directory and create a file named Dockerfile and the following content to it:
+
+FROM eclipse-temurin:17
+
+WORKDIR /app
+
+COPY target/springboot-docker-demo-0.0.1\-SNAPSHOT.jar /app/springboot-docker-demo.jar
+
+ENTRYPOINT \["java", "-jar", "springboot-docker-demo.jar"\]
+
+**FROM:** A docker image can use another image available in the docker registry as its base or parent image. In the above example, we use the eclipse-temurin:17 image as our base image.
+
+**WORKDIR:** This instruction creates a working directory in a docker container.
+
+**COPY:** The COPY instruction copies new files or directories and adds them to the filesystem of the container at the path.
+
+**ENTRYPOINT:** This is where you configure how the application is executed inside the container.
+
+### Build Docker image
+
+4\) Now that we have defined the Dockerfile, let’s build a docker image for our application.  
+Before building the docker image, you need to make sure that you’ve packaged the application in the form of a jar file using maven. 
+
+Let’s now build the docker image by typing the following command:
+
+docker build \-t springboot-docker-demo .
+
+The file path . defines the location of the Dockerfile in the current directory, and the \-t argument tags the resulting image, where the **repository** name is the springboot-docker-demo and the tag is the latest.
+
+After the build is successfully finished, we can check to see if it appears in the list of docker images available locally. To do so, we can execute the below command:
+
+docker images
+
+### Run Docker image in container
+
+5\) Once you have a docker image, you can run it using the docker run command like so:
+
+docker run \-p 8080:8080 springboot-docker-demo
+
+With the \-p option, we expose the container's 8080 port to the host's 8080\. (The host value is first.)
+
+By default, when you run a container using the docker run command, it does not publish any of its ports to the outside world. To make a port available to services outside Docker or to Docker containers that are not connected to the container’s network, use the \--publish or \-p flag.
+
+Running the docker image in the background, in detached mode. You can use the \-d option in the docker run command to run the container in the background:
+
+docker run \-d \-p 8080:8080 springboot-docker-demo
+
+The above command starts the container in the background and gives you the container ID.
+
+You can see the list of all containers running in your system using the following command:
+
+docker container ls
+
+### Demo
+
+6\) Once the docker image running in a container. Open the browser and hit this link in the browser [**http://localhost:8080/docker**](http://localhost:8080/docker)  
+You will see the below REST API response message in a browser:
+
+Hello from Spring Boot Application
+
