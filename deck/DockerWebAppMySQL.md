@@ -25,7 +25,7 @@ In You can clone this repo as your starting point [springboot-docker-demo](https
  
  The Spring Boot project architecture: 
 
-![Alt text](SpringBoot-architecure.png)
+![Alt text](SpringBoot-architecture.png)
 
 2\)  
 Let's first deploy the MySQL image in a docker container (or reuse an existing image).
