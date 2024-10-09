@@ -17,9 +17,7 @@ Make a new clone of the previous Spring Boot Project.
 
 ### Learning outcome
 
-* Be able to build a Docker image   
-* Be able to run image in docker container  
-* Be able to run image in docker container in detached mode (background)
+* BUser Docker compose to run web app and database together in network with docker compose
 
 ### Creating the docker-compose.yml configuration
 
