@@ -1,4 +1,4 @@
-# Docker tutorial 
+# Docker tutorial (Study Point ASssignment)
 #### 👉 Create a copy of this repo 👈
 
 Use this repo as a `template` - not a `fork`[^template]
@@ -13,11 +13,12 @@ Use this repo as a `template` - not a `fork`[^template]
 
 Continue there - in your own repo. Simply work the issues.
 
-#### 👉 Study point Assignment 👈
+#### 👉 Study point exercises 👈
  [exercise1](/deck/DockerMySQL.md) 
  [exercise2](/deck/DockerWebApp.md) 
  [exercise3](/deck/DockerVolumeCompose.md)
- [exercise4](/deck/DockerWebAppMySQL.md) are enabled on the template repo (your source).
+ [exercise4](/deck/DockerWebAppMySQL.md) 
+ [exercise5](/deck/DockerWebAppMySQLCompose.md) 
 
 #### 👉 If you need help 👈
 The [discussions](https://github.com/kea-dev/dx-intro/discussions "Note that all links in GitHub issues, discussions and .md files opens default in the same tab as your current - so make it a habbit to hold down CTRL (Windows & Linux) or ⌘ (Mac) when you click a link") are enabled on the template repo (your source). If you need help, if you want to suggets improvements or if you have an urge to contribute to this tutorial - simply make a statement in the discussions. Feel free to mention me; [@lakruzz](https://github.com/lakruzz).
