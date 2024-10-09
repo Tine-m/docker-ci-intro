@@ -9,7 +9,7 @@ Study Point Assignment # 5: 10 study points for all five exercises + Questionnai
  [exercise4](/deck/DockerWebAppMySQL.md) 
  [exercise5](/deck/DockerWebAppMySQLCompose.md) 
 
- Bemærk at du efter Docker tutorial, skal besvare spørgeskema på Moodle, for at få godkendt study points.
+ Notice: AFTER having finished the Docker tutorial, you must answer 3 questions på Moodle to get your study points approval.
 
 #### 👉 If you need help 👈
 If you need help, if you want to suggets improvements or if you have an urge to contribute to this tutorial. email me: 
