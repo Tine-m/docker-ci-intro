@@ -23,7 +23,9 @@ This assumes you have installed Docker locally on your developer computer(s)
 
 1\)  
 In a terminal on your local computer execute the following statements (on the remote Ubuntu Server and possibly also on Mac, you need to prefix the commands with **sudo**)  
-docker pull mysql:8.0.38    
+```docker
+docker pull mysql:8.0.38
+```
 Verify that the image was installed  
 ***Info**: You can replace 8.0.38 above (and in the following) with the tag "latest" to get the latest version of the MySQL image. However, it's a good practice to specify a version tag instead of using the latest, to ensure consistency across different environments. Also, as of this writing, 8.0.38 is the newest version supported by MySQL Workbench. If you install a 8.1.X version Workbench will complain.* 
 
@@ -31,9 +33,11 @@ Verify that the image was installed
 Now type the following to start the container. Change highlighted parts to you own liking  
 Important: Everything below MUST be **in one line**, that is NO LINE-BREAKS
 
+```docker
 docker run \--name my-docker-mysql \--restart unless-stopped \-p 3307:3306 \-e MYSQL\_ROOT\_PASSWORD=test-1234 \-d mysql:8.0.34
+```
 
-Verify that and ensure you can answer all the following questions (relevant for the exam):
+Verify that and ensure you can answer all the following questions:
 
 * A new mysql 8.0.28 image was "downloaded"  
 * A new container, named my-docker-mysql was created  
@@ -48,20 +52,26 @@ Verify that and ensure you can answer all the following questions (relevant for 
 3\) By now you have a running container, with a Linux image and MySQL installed. Let’s navigate into a terminal (bash window) **inside this container** and connect to the MySQL server  
 In your terminal type the following (remember sudo on Ubuntu and Mac)
 
+```docker
 docker exec \-it my-docker-mysql bash
+```
 
 This should open a terminal connected to the bash shell running INSIDE your container. 
 
-4\) In this terminal type the following to open a MySQL Client:   
-mysql \-u root \-p  
+4\) In this terminal type the following to open a MySQL Client: 
+```docker
+mysql \-u root \-p
+```
 Enter the password you selected when you started the container (**test-1234**, if you did CUT AND PASTE)
 
-5\) Execute a few SQL commands, to convince yourself that we have a functional MySQL-client, for example:	  
+5\) Execute a few SQL commands, to convince yourself that we have a functional MySQL-client, for example:	
+```sql
 show databases;  
 create database dummy\_db;  
 show databases;  
 drop database dummy\_db  
 show databases
+```
 
 6\) Now type exit to return to you  bash terminal in the container  
 7\) Type exit one more time to return to "your own" terminal
