@@ -13,6 +13,8 @@ Run a one-off command on a service
 
 This assumes you have installed Docker and Maven locally on your developer computer.
 
+Make a new clone of the previous Spring Boot Project.
+
 ### Learning outcome
 
 * Be able to build a Docker image   
