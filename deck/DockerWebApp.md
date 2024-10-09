@@ -8,7 +8,7 @@ This assumes you have installed Docker and Maven locally on your developer compu
 
 ### Learning outcome
 
-* Be able to build a Docker image   
+* Be able to build a docker image   
 * Be able to run image in docker container  
 * Be able to run image in docker container in detached mode (background)
 
@@ -35,7 +35,7 @@ public class DockerController {
 mvn clean package
 ```
 
-Once maven builds successfully, go to the target folder and see the springboot-docker-demo-0.0.1-SNAPSHOT.jar.
+Once maven builds successfully, go to the target folder and see the springboot-docker-demo-0.0.1-SNAPSHOT.jar (assuming you have cloned my repo).
 
 ### Create a Dockerfile
 
