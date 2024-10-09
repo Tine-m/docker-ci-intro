@@ -21,4 +21,5 @@ Continue there - in your own repo. Simply work the issues.
  [exercise5](/deck/DockerWebAppMySQLCompose.md) 
 
 #### 👉 If you need help 👈
-If you need help, if you want to suggets improvements or if you have an urge to contribute to this tutorial. email me: [@lakruzz](tm@cphbusiness.dk).
+If you need help, if you want to suggets improvements or if you have an urge to contribute to this tutorial. email me: 
+<tm@cphbusiness.dk>.
