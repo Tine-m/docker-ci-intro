@@ -24,7 +24,7 @@ You will find most of the commands you need in this document. Just below the tab
 
 You can find a more complete Cheat Sheet here: [https://dockerlabs.collabnix.com/docker/cheatsheet/](https://dockerlabs.collabnix.com/docker/cheatsheet/) 
 
-# Docker Compose Cheat Cheat
+# Docker Compose Cheat Sheet
 
 The following is probably the only commands you will need for docker-compose this semester
 

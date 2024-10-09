@@ -4,7 +4,7 @@ In this exercise you will create a docker image for a Spring boot application, t
 
 ### Preconditions
 
-This assumes you have installed Docker and Maven locally on your developer computer
+This assumes you have installed Docker and Maven locally on your developer computer.
 
 ### Learning outcome
 
