@@ -1,11 +1,24 @@
-# DX (Developer Experience) intro
-**DX - Developer Experience. This tutorial introduces some of the features in the GitHub eco-system that will make your team go faster - in a very DevOpsy way.**
+# Docker tutorial 
+Study Point Assignment # 5: 10 study points for all five exercises + Questionnaire on Moodle
 
-This repo is a copy of the template repo at [kea-dev/dx-intro](https://github.com/kea-dev/dx-intro)
+#### 👉 Study point exercises 👈
+#### 👉 Work those issues 👈
+ [exercise1](/deck/DockerMySQL.md) 
+ [exercise2](/deck/DockerWebApp.md) 
+ [exercise3](/deck/DockerVolumeCompose.md)
+ [exercise4](/deck/DockerWebAppMySQL.md) 
+ [exercise5](/deck/DockerWebAppMySQLCompose.md) 
+
+ Notice: AFTER having finished the Docker tutorial, you must answer 3 questions på Moodle to get your study points approval.
+
+#### 👉 If you need help 👈
+If you need help, if you want to suggets improvements or if you have an urge to contribute to this tutorial. email me: 
+<tm@cphbusiness.dk>.
+
+
+This repo is a copy of the template repo at [Tine-m/docker-ci-intro](https://github.com/Tine-m/docker-ci-intro)
 
 #### 👉 Work those issues 👈
 
 <img width="100" align="left" alt="image" src="https://user-images.githubusercontent.com/155492/219313640-1328aefb-7695-41d2-bbef-5c5ffe6ab079.png"> This repo has some issues copied over from the template. Simply work the issues.<br clear="both">
 
-#### 👉 If you need help 👈
-The [discussions](https://github.com/kea-dev/dx-intro/discussions "Note that all links in GitHub issues, discussions and .md files opens default in the same tab as your current - so make it a habbit to hold down CTRL (Windows & Linux) or ⌘ (Mac) when you click a link") are enabled on the template repo (your source). If you need help, if you want to suggets improvements or if you have an urge to contribute to this tutorial - simply make a statement in the discussions there. Feel free to mention me; [@lakruzz](https://github.com/lakruzz).
