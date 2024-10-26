@@ -115,7 +115,7 @@ COPY: The COPY instruction copies new files or directories and adds them to the 
 ENTRYPOINT: This is where you configure how the application is executed inside the container.
 
 #### Adding Profile to Deploy in Docker Environment
-Let's implement the profile in the Spring boot application to deploy it in a docker environment (I'm not sure if this step is necessary).
+Let's implement the profile in the Spring boot application to deploy it in a docker environment.
 
 9\)  
 Create an `application-docker.properties` file under the resources folder and insert the following:
@@ -132,7 +132,7 @@ spring.jpa.hibernate.ddl-auto=update
 Insert into the `application.properties` file:
 
 ```docker
-spring.datasource.url=jdbc:mysql://mysqldb:3306/employeedb
+spring.datasource.url=jdbc:mysql://localhost:3307/employeedb
 spring.datasource.username=root
 spring.datasource.password=root
 
