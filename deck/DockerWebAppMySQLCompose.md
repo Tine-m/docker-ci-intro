@@ -17,7 +17,7 @@ Make a new clone of the previous Spring Boot Project.
 
 ### Learning outcome
 
-Use Docker compose to run web app and database together in network with docker compose
+Use Docker compose to run web app and database together in network.
 
 ### Creating the docker-compose.yml configuration
 
@@ -61,6 +61,7 @@ Let's understand the above docker-compose.yml file.
 We have configured two services:
 
 **mysqldb service**: It runs MySQL database that runs on port 3306
+
 **springboot-services service**: Deploy Spring boot application in tomcat server on port 8080
 
 **build** - Specify the location of the Dockerfile.
