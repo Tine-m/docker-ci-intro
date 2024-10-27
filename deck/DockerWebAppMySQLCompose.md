@@ -17,7 +17,7 @@ Make a new clone of the previous Spring Boot Project.
 
 ### Learning outcome
 
-* BUser Docker compose to run web app and database together in network with docker compose
+Use Docker compose to run web app and database together in network with docker compose
 
 ### Creating the docker-compose.yml configuration
 
